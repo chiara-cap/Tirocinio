@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt
 from PIL import Image
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-MODELS = ['ViT-B/16']
+MODELSs = ['ViT-B/16']
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
