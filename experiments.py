@@ -57,15 +57,6 @@ def classify(faces, prompt_features, class_labels):
     return labels, predictions
 
 
-def aggregated_confusion_matrix(fairface_labels, predictions):
-    results = pd.DataFrame({'fairface_labels': fairface_labels, 'predictions': predictions})
-
-    results['fairface_race'] = results['fairface_labels'].apply(lambda x: x.split('_')[0])
-    results['prediction_race'] = results['predictions'].apply(lambda x: x.split('_')[0])
-
-    return results.groupby(['fairface_race', 'prediction_race']).size().unstack(fill_value=0)
-
-
 def labels_list(category, unique_labels):
     return [label for i, label in enumerate(unique_labels) if category in label]
 
