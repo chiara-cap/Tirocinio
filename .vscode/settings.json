@@ -1,0 +1,7 @@
+{ 
+    "files.autoSave": "afterDelay", 
+    "terminal.integrated.automationProfile.linux": { 
+        "path": "/homes/ccapellino/Tirocinio/bash.sh" 
+         
+    } 
+}
